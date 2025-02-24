@@ -1,0 +1,13 @@
+---
+title: "Software Requirements"
+format: html
+---
+
+### **IBM OpenPages**
+* **version:** 9.0.0.3 or above
+
+    ![](/images/prereq.png)
+
+### **watson<span style="color:#2c62f5;">x</span>.ai**
+
+### **watson Machine Learning**

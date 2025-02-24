@@ -1,38 +1,52 @@
 
 ---
-title: "Project Name"
-subtitle: "Subtitle"
+title: "Evaluating Third Party Risk with AI"
+subtitle: "Evaluating third party information technology products and their cybersecurity risks using watsonx.ai."
 format: html
 ---
 ```{=html}
-<span class="dot">SL</span> &ensp;Samuel Lee&ensp;
+<span class="dot">ET</span> &ensp;Eashan Thakuria&ensp;
 ```
 ```{=html}
-<span class="dot">BK</span> &ensp;Bo Kulbacki&ensp;
+<span class="dot">JS</span> &ensp;John Robert Scott&ensp;
 ```
 <br>
 ---
 Description: "Project Name"
 ---
 
-## The Why
+## Business Statement
 
-(High-level description of the business challenges and client pain points)
+The Third Party Risk team within a financial institution completes over 1000 vendor assessments per year as a part of their ongoing due diligence to vet the institution's third party partners. Each assessment takes about 45 working hours to complete and is driven largely by manual evaluation of documentation, including internal policies, vendor policies, and responses on risk questionnaires.
 
-### Problem Details
+### Challenges
 
-Sed elementum convallis quam, sed tempor massa dictum sit amet. Phasellus ultricies ante id massa scelerisque interdum. Vestibulum vitae volutpat felis. Sed metus magna, malesuada vitae odio eu, volutpat aliquam odio. Mauris eget purus ex. Praesent nec gravida lorem. Nam rhoncus bibendum nulla at viverra. Curabitur at diam sem. Pellentesque semper venenatis lorem quis pharetra. Cras venenatis consectetur ante vitae mattis. Etiam in augue vel nunc euismod sodales vitae eu arcu.
+* **Backlog of assessments** - The institution's Third Party Risk team is behind schedule, with a backlog of assessments impacting the progression of strategic projects and initiatives across the enterprise.
+* **Diminished resources on the Third Party Risk team** - Third Party Risk team has to do more with less, as budget constraints have led to team size reductions
+* **Increasing workload** - the number of assessments has grown larger every year, with continued increases forecasted
+* **Inability to focus on high value work** - including evaluating controls, deepening assessments for critical vendors, improving processes
+* **Overly manual process** - 45 working hours per assessment prohibits the Third Party Risk team to safely scale their assessments to meet the enterprise demand
 
-Maecenas tempus ultricies sapien, porta suscipit est facilisis quis. Ut imperdiet massa condimentum sapien lobortis, dictum eleifend enim cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean interdum vel velit non dictum. Suspendisse bibendum neque ut nulla condimentum, quis dictum sem consectetur. Integer quis arcu sem. Sed condimentum dolor sed libero posuere, sed tristique nulla cursus. In hac habitasse platea dictumst. Aenean ullamcorper condimentum risus, at semper tortor consequat eu.
+## Use Case
+First Line of Defense - When vendors send the client their filled out SIG Questionnaires, Assessors take about 6-10 hours to review all of their answers and evidence and summarize which topics are considered “Issues” according to the organization's standards, and which topics require a follow-up discussion with the vendor to clarify their response.
+IBM is leveraging wx.ai to augment this process and allow assessors to reduce the time it takes to understand the quality of vendor questionnaire responses.
 
-Pellentesque a semper nisl, a vehicula libero. Mauris aliquam porttitor nibh ut porttitor. Praesent eu sem lacinia, volutpat dolor id, interdum enim. Etiam sit amet urna rhoncus, iaculis ex hendrerit, suscipit urna. Duis id porta massa, ac ultrices nulla. Vestibulum ut rutrum lacus, ac vulputate libero. Sed metus massa, maximus ac vulputate nec, lacinia sit amet felis.
+### Business Outcomes
+Estimated 20% reduction in assessment time, amounting to about 10,000 working hours saved by AI or approximately 800k in labor hours per year.
 
+#### **Core Outcomes:**
 
-### Additional Context
-
-Sed elementum convallis quam, sed tempor massa dictum sit amet. Phasellus ultricies ante id massa scelerisque interdum. Vestibulum vitae volutpat felis. Sed metus magna, malesuada vitae odio eu, volutpat aliquam odio. Mauris eget purus ex. Praesent nec gravida lorem. Nam rhoncus bibendum nulla at viverra. Curabitur at diam sem. Pellentesque semper venenatis lorem quis pharetra. Cras venenatis consectetur ante vitae mattis. Etiam in augue vel nunc euismod sodales vitae eu arcu.
-
-Maecenas tempus ultricies sapien, porta suscipit est facilisis quis. Ut imperdiet massa condimentum sapien lobortis, dictum eleifend enim cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean interdum vel velit non dictum. Suspendisse bibendum neque ut nulla condimentum, quis dictum sem consectetur. Integer quis arcu sem. Sed condimentum dolor sed libero posuere, sed tristique nulla cursus. In hac habitasse platea dictumst. Aenean ullamcorper condimentum risus, at semper tortor consequat eu.
-
-Pellentesque a semper nisl, a vehicula libero. Mauris aliquam porttitor nibh ut porttitor. Praesent eu sem lacinia, volutpat dolor id, interdum enim. Etiam sit amet urna rhoncus, iaculis ex hendrerit, suscipit urna. Duis id porta massa, ac ultrices nulla. Vestibulum ut rutrum lacus, ac vulputate libero. Sed metus massa, maximus ac vulputate nec, lacinia sit amet felis.
+1. Third party risk Assessors want to programmatically identify all the issues and gaps within a particular vendor SIG relative to the institution's MSR to facilitate the overall assessment process and reduce overall manual tasks.
+    * An issue refers to the binary classification on whether or not the expected “appropriate response” has been met by each vendor SIG response
+    * A gap refers to the binary classification on whether or not the “Additional Information” provided in the vendor SIG can support the vendor SIG “Response”
+2. Third party risk assessors want to programmatically identify all the relevant MSR context which would provide the necessary information to answer the specific SIG question.
+    * Need to check if the MSR Context is actually relevant to the SIG question since there will be instance in which a question may not be related to any part of the MSR.
+    * Need to provide metadata for each relevant MSR context:
+        * Filename
+        * Heading
+        * Subheading
+3. Third party risk assessors want to programmatically provide a “Recommendation” for any Vendor SIG response which requires a follow up and/or has “Additional Information” in the vendor SIG.
+    * Provide a recommendation which is anchored on the gap between the relevant “MSR context” for each SIG question and the “Additional Information” provide in the vendor SIG
+    * Frame part of the recommendation as questions that could be used as a follow-ups for a vendor
+    * Ensure the questions in the recommendation are not already answered in the “Additional Information” provided in the vendor SIG
 

@@ -1,0 +1,73 @@
+---
+title: ""
+format: html
+---
+
+# Overview
+
+-----
+This solution’s key differentiator is its hybrid approach, which combines deterministic methods with interpretive techniques. Rather than relying solely on generative AI, this solution intentionally leverages the strengths of both approaches to deliver a more holistic, accurate, and economical solution. The deterministic component uses precise, programmatic logic to achieve specific outcomes, while the interpretive component harnesses generative AI to efficiently address scenarios that traditional methods would find overly tedious or prone to excessive edge cases. This synergy not only enhances overall performance but also saves valuable time.
+
+**This solution comprises two core components:**
+    
+1. Preprocessing Raw Data:
+
+    - Transform raw data into actionable insights through a series of deterministic and interpretative steps, enabling generative AI to achieve optimal outcomes within OpenPages.
+
+2. Configuring OpenPages:
+    
+    - Utilize the processed data to set up the OpenPages platform while preserving critical relationships among key entities such as SIG questions, Internal Security Requirements, and ServiceNow Issues.
+    - Develop and deploy watson<span style="color:#2c62f5;">x</span>.ai prompts that leverage generative AI to identify issues and gaps, provide recommendations, and generate follow-up questions.
+
+## Solution Flow
+![](/images/solution_flow.png)
+
+
+
+## Solution Components
+
+### Data Sources
+The data sources leveraged in this solution are:
+
+* Internal Security Requirements
+    * Enterprise security requirements designed to ensure compliance with organizational policies, organized into specific domains relevant to the SIG.
+* ServiceNow Issue Catalog
+    * A catalog of relevant ServiceNow issues and its relevant metadata
+* Blank SIG (Standardized Information Gathering) Questionnaire'
+    * Empty version of a SIG from 2024 with all the relevant headers populated
+* Vendor SIG Questionnaires
+    * Vendor populated SIG questionnaires with the relevant information.
+* Vendor KY3P Extract
+    * Vendor populated information from KY3P with the vendor's response and Additional Comments (if provided).
+
+### Preprocess Data
+
+The primary objective of preprocessing the source data was to create the **Reference Data** that accurately maps the relationships among SIG questions, contextual details from the Internal Security Requirements, and ServiceNow Issues—thereby streamlining data ingestion into OpenPages.
+
+This phase involved a comprehensive ETL process to cleanse and structure the data to create the **Reference Data**, and it comprises of four key parts:
+
+1. Chunk, embed and ingest the *Internal Security Requirements*
+2. Clean and filter the *ServiceNow Issue Catalog*
+3. Preprocess *Blank SIG Questionnaire* and *Vendor SIG Questionnaires*
+4. Build **Reference Data** and FastMap Import
+
+
+![](/images/ISR_preprocess.png)
+
+#### Chunk, embed and ingest the *Internal Security Requirements*
+
+* Programmatically divide the *Internal Security Requirements* into a JSON structure by section, attaching relevant metadata—such as headings, subheadings, filenames, and summaries—to each segment.
+* Embed the chunks structured within the JSON into a vectors.
+* Ingest the vectors into a vectorstore with the metadata.
+
+#### Clean and filer  *ServiceNow Issue Catalog*
+
+#### Preprocess *Blank SIG Questionnaire* and *Vendor SIG Questionnaires*
+
+#### Build **Reference Data** and FastMap Import
+
+
+
+
+
+
