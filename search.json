@@ -1,0 +1,126 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Evaluating Third Party Risk with AI",
+    "section": "",
+    "text": "ET",
+    "crumbs": [
+      "Problem Definition"
+    ]
+  },
+  {
+    "objectID": "index.html#business-statement",
+    "href": "index.html#business-statement",
+    "title": "Evaluating Third Party Risk with AI",
+    "section": "Business Statement",
+    "text": "Business Statement\nThe Third Party Risk team within a financial institution completes over 1000 vendor assessments per year as a part of their ongoing due diligence to vet the institution’s third party partners. Each assessment takes about 45 working hours to complete and is driven largely by manual evaluation of documentation, including internal policies, vendor policies, and responses on risk questionnaires.\n\nChallenges\n\nBacklog of assessments - The institution’s Third Party Risk team is behind schedule, with a backlog of assessments impacting the progression of strategic projects and initiatives across the enterprise.\nDiminished resources on the Third Party Risk team - Third Party Risk team has to do more with less, as budget constraints have led to team size reductions\nIncreasing workload - the number of assessments has grown larger every year, with continued increases forecasted\nInability to focus on high value work - including evaluating controls, deepening assessments for critical vendors, improving processes\nOverly manual process - 45 working hours per assessment prohibits the Third Party Risk team to safely scale their assessments to meet the enterprise demand",
+    "crumbs": [
+      "Problem Definition"
+    ]
+  },
+  {
+    "objectID": "index.html#use-case",
+    "href": "index.html#use-case",
+    "title": "Evaluating Third Party Risk with AI",
+    "section": "Use Case",
+    "text": "Use Case\nFirst Line of Defense - When vendors send the client their filled out SIG Questionnaires, Assessors take about 6-10 hours to review all of their answers and evidence and summarize which topics are considered “Issues” according to the organization’s standards, and which topics require a follow-up discussion with the vendor to clarify their response. IBM is leveraging wx.ai to augment this process and allow assessors to reduce the time it takes to understand the quality of vendor questionnaire responses.\n\nBusiness Outcomes\nEstimated 20% reduction in assessment time, amounting to about 10,000 working hours saved by AI or approximately 800k in labor hours per year.\n\nCore Outcomes:\n\nThird party risk Assessors want to programmatically identify all the issues and gaps within a particular vendor SIG relative to the institution’s MSR to facilitate the overall assessment process and reduce overall manual tasks.\n\nAn issue refers to the binary classification on whether or not the expected “appropriate response” has been met by each vendor SIG response\nA gap refers to the binary classification on whether or not the “Additional Information” provided in the vendor SIG can support the vendor SIG “Response”\n\nThird party risk assessors want to programmatically identify all the relevant MSR context which would provide the necessary information to answer the specific SIG question.\n\nNeed to check if the MSR Context is actually relevant to the SIG question since there will be instance in which a question may not be related to any part of the MSR.\nNeed to provide metadata for each relevant MSR context:\n\nFilename\nHeading\nSubheading\n\n\nThird party risk assessors want to programmatically provide a “Recommendation” for any Vendor SIG response which requires a follow up and/or has “Additional Information” in the vendor SIG.\n\nProvide a recommendation which is anchored on the gap between the relevant “MSR context” for each SIG question and the “Additional Information” provide in the vendor SIG\nFrame part of the recommendation as questions that could be used as a follow-ups for a vendor\nEnsure the questions in the recommendation are not already answered in the “Additional Information” provided in the vendor SIG",
+    "crumbs": [
+      "Problem Definition"
+    ]
+  },
+  {
+    "objectID": "src/key-takeaway.html",
+    "href": "src/key-takeaway.html",
+    "title": "Key Takeaways",
+    "section": "",
+    "text": "Best Practices\n(Capture the main takeaways and results of the project)",
+    "crumbs": [
+      "Key Takeaways"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/steptwo-imp.html",
+    "href": "src/implementation_methodology/steptwo-imp.html",
+    "title": "Step Two",
+    "section": "",
+    "text": "Step Two Implementation\nPhasellus at risus egestas, ultricies tortor efficitur, auctor augue. Suspendisse finibus maximus dui nec condimentum. Proin fringilla efficitur vehicula. Suspendisse sem lacus, iaculis quis erat et, facilisis sagittis est. Sed sapien justo, condimentum vitae aliquet sed, faucibus at ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce placerat ante eget diam tincidunt, vitae tincidunt sapien malesuada. Nullam ullamcorper justo eros. Duis ultricies aliquam dui, id aliquam lorem congue vitae. Ut porttitor, tellus eu dignissim semper, turpis nunc cursus libero, sed placerat est dui non enim.\nVestibulum libero dolor, vehicula vitae risus non, consequat gravida neque. Maecenas a posuere sem. Quisque dignissim porta pretium. Nam mattis lacus commodo lobortis consequat. Vestibulum at massa a quam egestas accumsan. Fusce ac neque eu libero maximus aliquet id quis metus. In sodales neque ut turpis iaculis vehicula. Sed volutpat, tellus non laoreet aliquet, risus felis ornare dolor, interdum venenatis turpis metus in lorem. Aliquam quam ligula, porttitor non ultrices ac, lacinia ullamcorper massa. Integer molestie eleifend urna, imperdiet dignissim tellus malesuada ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique sem ac purus interdum, vitae pharetra erat fringilla. Integer non nunc a eros porttitor rutrum. Suspendisse ut libero urna. Vestibulum vitae est at diam vestibulum aliquet. Donec porta nunc eget lobortis mollis.\nVestibulum luctus sodales odio, at luctus lacus lobortis a. Aliquam vulputate id turpis sit amet bibendum. Donec a dignissim tellus, vel vehicula erat. Pellentesque hendrerit ex magna, at dictum est pretium a. Vivamus faucibus ipsum lectus, ut elementum diam interdum scelerisque. Cras magna sapien, tincidunt quis eleifend at, tincidunt non eros. Aliquam ac augue turpis.",
+    "crumbs": [
+      "Implementation Methodology",
+      "Step Two"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/capabilities.html",
+    "href": "src/solution_overview/capabilities.html",
+    "title": "Step Three",
+    "section": "",
+    "text": "Step Three Solution",
+    "crumbs": [
+      "Solution Overview",
+      "Capabilities"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/soft_reqs.html",
+    "href": "src/solution_overview/soft_reqs.html",
+    "title": "Software Requirements",
+    "section": "",
+    "text": "IBM OpenPages\n\nversion: 9.0.0.3 or above\n\n\n\n\nwatsonx.ai\n\n\nwatson Machine Learning",
+    "crumbs": [
+      "Solution Overview",
+      "Software Requirements"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/overview.html",
+    "href": "src/solution_overview/overview.html",
+    "title": "Overview",
+    "section": "",
+    "text": "This solution’s key differentiator is its hybrid approach, which combines deterministic methods with interpretive techniques. Rather than relying solely on generative AI, this solution intentionally leverages the strengths of both approaches to deliver a more holistic, accurate, and economical solution. The deterministic component uses precise, programmatic logic to achieve specific outcomes, while the interpretive component harnesses generative AI to efficiently address scenarios that traditional methods would find overly tedious or prone to excessive edge cases. This synergy not only enhances overall performance but also saves valuable time.\nThis solution comprises two core components:\n\nPreprocessing Raw Data:\n\nTransform raw data into actionable insights through a series of deterministic and interpretative steps, enabling generative AI to achieve optimal outcomes within OpenPages.\n\nConfiguring OpenPages:\n\nUtilize the processed data to set up the OpenPages platform while preserving critical relationships among key entities such as SIG questions, Internal Security Requirements, and ServiceNow Issues.\nDevelop and deploy watsonx.ai prompts that leverage generative AI to identify issues and gaps, provide recommendations, and generate follow-up questions.\n\n\n\n\n\n\n\n\n\n\nThe data sources leveraged in this solution are:\n\nInternal Security Requirements\n\nEnterprise security requirements designed to ensure compliance with organizational policies, organized into specific domains relevant to the SIG.\n\nServiceNow Issue Catalog\n\nA catalog of relevant ServiceNow issues and its relevant metadata\n\nBlank SIG (Standardized Information Gathering) Questionnaire’\n\nEmpty version of a SIG from 2024 with all the relevant headers populated\n\nVendor SIG Questionnaires\n\nVendor populated SIG questionnaires with the relevant information.\n\nVendor KY3P Extract\n\nVendor populated information from KY3P with the vendor’s response and Additional Comments (if provided).\n\n\n\n\n\nThe primary objective of preprocessing the source data was to create the Reference Data that accurately maps the relationships among SIG questions, contextual details from the Internal Security Requirements, and ServiceNow Issues—thereby streamlining data ingestion into OpenPages.\nThis phase involved a comprehensive ETL process to cleanse and structure the data to create the Reference Data, and it comprises of four key parts:\n\nChunk, embed and ingest the Internal Security Requirements\nClean and filter the ServiceNow Issue Catalog\nPreprocess Blank SIG Questionnaire and Vendor SIG Questionnaires\nBuild Reference Data and FastMap Import\n\n\n\n\n\nProgrammatically divide the Internal Security Requirements into a JSON structure by section, attaching relevant metadata—such as headings, subheadings, filenames, and summaries—to each segment.\nEmbed the chunks structured within the JSON into a vectors.\nIngest the vectors into a vectorstore with the metadata.",
+    "crumbs": [
+      "Solution Overview",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/overview.html#solution-components",
+    "href": "src/solution_overview/overview.html#solution-components",
+    "title": "Overview",
+    "section": "",
+    "text": "The data sources leveraged in this solution are:\n\nInternal Security Requirements\n\nEnterprise security requirements designed to ensure compliance with organizational policies, organized into specific domains relevant to the SIG.\n\nServiceNow Issue Catalog\n\nA catalog of relevant ServiceNow issues and its relevant metadata\n\nBlank SIG (Standardized Information Gathering) Questionnaire’\n\nEmpty version of a SIG from 2024 with all the relevant headers populated\n\nVendor SIG Questionnaires\n\nVendor populated SIG questionnaires with the relevant information.\n\nVendor KY3P Extract\n\nVendor populated information from KY3P with the vendor’s response and Additional Comments (if provided).\n\n\n\n\n\nThe primary objective of preprocessing the source data was to create the Reference Data that accurately maps the relationships among SIG questions, contextual details from the Internal Security Requirements, and ServiceNow Issues—thereby streamlining data ingestion into OpenPages.\nThis phase involved a comprehensive ETL process to cleanse and structure the data to create the Reference Data, and it comprises of four key parts:\n\nChunk, embed and ingest the Internal Security Requirements\nClean and filter the ServiceNow Issue Catalog\nPreprocess Blank SIG Questionnaire and Vendor SIG Questionnaires\nBuild Reference Data and FastMap Import\n\n\n\n\n\nProgrammatically divide the Internal Security Requirements into a JSON structure by section, attaching relevant metadata—such as headings, subheadings, filenames, and summaries—to each segment.\nEmbed the chunks structured within the JSON into a vectors.\nIngest the vectors into a vectorstore with the metadata.",
+    "crumbs": [
+      "Solution Overview",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/stepone-imp.html",
+    "href": "src/implementation_methodology/stepone-imp.html",
+    "title": "Step One",
+    "section": "",
+    "text": "Step One Implementation - The How\n(Details the process and techniques used to execute the technical solution)",
+    "crumbs": [
+      "Implementation Methodology",
+      "Step One"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/stepthree-imp.html",
+    "href": "src/implementation_methodology/stepthree-imp.html",
+    "title": "Step Three",
+    "section": "",
+    "text": "Step Three Implementation\nPhasellus at risus egestas, ultricies tortor efficitur, auctor augue. Suspendisse finibus maximus dui nec condimentum. Proin fringilla efficitur vehicula. Suspendisse sem lacus, iaculis quis erat et, facilisis sagittis est. Sed sapien justo, condimentum vitae aliquet sed, faucibus at ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce placerat ante eget diam tincidunt, vitae tincidunt sapien malesuada. Nullam ullamcorper justo eros. Duis ultricies aliquam dui, id aliquam lorem congue vitae. Ut porttitor, tellus eu dignissim semper, turpis nunc cursus libero, sed placerat est dui non enim.\nVestibulum libero dolor, vehicula vitae risus non, consequat gravida neque. Maecenas a posuere sem. Quisque dignissim porta pretium. Nam mattis lacus commodo lobortis consequat. Vestibulum at massa a quam egestas accumsan. Fusce ac neque eu libero maximus aliquet id quis metus. In sodales neque ut turpis iaculis vehicula. Sed volutpat, tellus non laoreet aliquet, risus felis ornare dolor, interdum venenatis turpis metus in lorem. Aliquam quam ligula, porttitor non ultrices ac, lacinia ullamcorper massa. Integer molestie eleifend urna, imperdiet dignissim tellus malesuada ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique sem ac purus interdum, vitae pharetra erat fringilla. Integer non nunc a eros porttitor rutrum. Suspendisse ut libero urna. Vestibulum vitae est at diam vestibulum aliquet. Donec porta nunc eget lobortis mollis.\nVestibulum luctus sodales odio, at luctus lacus lobortis a. Aliquam vulputate id turpis sit amet bibendum. Donec a dignissim tellus, vel vehicula erat. Pellentesque hendrerit ex magna, at dictum est pretium a. Vivamus faucibus ipsum lectus, ut elementum diam interdum scelerisque. Cras magna sapien, tincidunt quis eleifend at, tincidunt non eros. Aliquam ac augue turpis.",
+    "crumbs": [
+      "Implementation Methodology",
+      "Step Three"
+    ]
+  },
+  {
+    "objectID": "src/landing_page/landing_page.html",
+    "href": "src/landing_page/landing_page.html",
+    "title": "Project Name",
+    "section": "",
+    "text": "Project Name\nSubtitle\n\n\nOur Documentation \n\n\n\n\n\nNext Steps\n\n\n\nL ink 1\n\n\n\nLink 2"
+  }
+]
