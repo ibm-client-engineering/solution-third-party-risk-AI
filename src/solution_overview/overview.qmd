@@ -20,9 +20,7 @@ This solution’s key differentiator is its hybrid approach, which combines dete
     - Develop and deploy watson<span style="color:#2c62f5;">x</span>.ai prompts that leverage generative AI to identify issues and gaps, provide recommendations, and generate follow-up questions.
 
 ## Solution Flow
-![](/images/solution_flow.png)
-
-
+[![](/images/solution_flow.png)](/images/solution_flow.png){target="_blank"}
 
 ## Solution Components
 
@@ -42,7 +40,7 @@ The data sources leveraged in this solution are:
 
 ### Preprocess Data
 
-The primary objective of preprocessing the source data was to create the **Reference Data** that accurately maps the relationships among SIG questions, contextual details from the Internal Security Requirements, and ServiceNow Issues—thereby streamlining data ingestion into OpenPages.
+The primary objective of preprocessing the source data was to create the **Reference Data** that accurately maps the relationships among SIG questions, contextual details from the Internal Security Requirements, and ServiceNow Issues which facilitated the data ingestion process into OpenPages.
 
 This phase involved a comprehensive ETL process to cleanse and structure the data to create the **Reference Data**, and it comprises of four key parts:
 
@@ -58,7 +56,7 @@ This phase involved a comprehensive ETL process to cleanse and structure the dat
 
 * Programmatically divide the *Internal Security Requirements* into a JSON structure by section, attaching relevant metadata—such as headings, subheadings, filenames, and summaries—to each segment.
 * Embed the chunks structured within the JSON into a vectors.
-* Ingest the vectors into a vectorstore with the metadata.
+* Ingest the vectors into a vectorstore with its metadata.
 
 #### Clean and filer  *ServiceNow Issue Catalog*
 
