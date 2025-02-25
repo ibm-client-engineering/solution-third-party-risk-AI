@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/index.html</loc>
-    <lastmod>2025-02-25T19:00:34.241Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/key-takeaway.html</loc>
-    <lastmod>2025-02-25T19:00:34.242Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/implementation_methodology/stepone-imp.html</loc>
+    <lastmod>2025-02-25T20:17:14.298Z</lastmod>
   </url>
   <url>
     <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/implementation_methodology/steptwo-imp.html</loc>
-    <lastmod>2025-02-25T19:00:34.242Z</lastmod>
+    <lastmod>2025-02-25T20:17:14.298Z</lastmod>
   </url>
   <url>
     <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/solution_overview/int_deploy.html</loc>
-    <lastmod>2025-02-25T19:00:34.242Z</lastmod>
+    <lastmod>2025-02-25T20:17:14.299Z</lastmod>
   </url>
   <url>
     <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/solution_overview/capabilities.html</loc>
-    <lastmod>2025-02-25T19:00:34.242Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/solution_overview/soft_reqs.html</loc>
-    <lastmod>2025-02-25T19:00:34.242Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/solution_overview/overview.html</loc>
-    <lastmod>2025-02-25T19:00:34.242Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/implementation_methodology/stepone-imp.html</loc>
-    <lastmod>2025-02-25T19:00:34.242Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/implementation_methodology/stepthree-imp.html</loc>
-    <lastmod>2025-02-25T19:00:34.242Z</lastmod>
+    <lastmod>2025-02-25T20:17:14.299Z</lastmod>
   </url>
   <url>
     <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/landing_page/landing_page.html</loc>
-    <lastmod>2025-02-25T19:00:34.242Z</lastmod>
+    <lastmod>2025-02-25T20:17:14.298Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/index.html</loc>
+    <lastmod>2025-02-25T20:17:14.298Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/key-takeaway.html</loc>
+    <lastmod>2025-02-25T20:17:14.298Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/solution_overview/overview.html</loc>
+    <lastmod>2025-02-25T20:17:14.299Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/solution_overview/soft_reqs.html</loc>
+    <lastmod>2025-02-25T20:17:14.299Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ibm-client-engineering.github.io/solution-third-party-risk-AI/src/implementation_methodology/stepthree-imp.html</loc>
+    <lastmod>2025-02-25T20:17:14.298Z</lastmod>
   </url>
 </urlset>

@@ -1,42 +1,13 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Evaluating Third Party Risk with AI",
+    "objectID": "src/implementation_methodology/stepone-imp.html",
+    "href": "src/implementation_methodology/stepone-imp.html",
+    "title": "Step One",
     "section": "",
-    "text": "ET",
+    "text": "Step One Implementation - The How\n(Details the process and techniques used to execute the technical solution)",
     "crumbs": [
-      "Problem Definition"
-    ]
-  },
-  {
-    "objectID": "index.html#business-statement",
-    "href": "index.html#business-statement",
-    "title": "Evaluating Third Party Risk with AI",
-    "section": "Business Statement",
-    "text": "Business Statement\nThe Third Party Risk team within a financial institution completes over 1000 vendor assessments per year as a part of their ongoing due diligence to vet the institution’s third party partners. Each assessment takes about 45 working hours to complete and is driven largely by manual evaluation of documentation, including internal policies, vendor policies, and responses on risk questionnaires.\n\nChallenges\n\nBacklog of assessments - The institution’s Third Party Risk team is behind schedule, with a backlog of assessments impacting the progression of strategic projects and initiatives across the enterprise.\nDiminished resources on the Third Party Risk team - Third Party Risk team has to do more with less, as budget constraints have led to team size reductions\nIncreasing workload - the number of assessments has grown larger every year, with continued increases forecasted\nInability to focus on high value work - including evaluating controls, deepening assessments for critical vendors, improving processes\nOverly manual process - 45 working hours per assessment prohibits the Third Party Risk team to safely scale their assessments to meet the enterprise demand",
-    "crumbs": [
-      "Problem Definition"
-    ]
-  },
-  {
-    "objectID": "index.html#use-case",
-    "href": "index.html#use-case",
-    "title": "Evaluating Third Party Risk with AI",
-    "section": "Use Case",
-    "text": "Use Case\nFirst Line of Defense - When vendors send the client their filled out SIG Questionnaires, Assessors take about 6-10 hours to review all of their answers and evidence and summarize which topics are considered “Issues” according to the organization’s standards, and which topics require a follow-up discussion with the vendor to clarify their response. IBM is leveraging wx.ai to augment this process and allow assessors to reduce the time it takes to understand the quality of vendor questionnaire responses.\n\nBusiness Outcomes\nEstimated 20% reduction in assessment time, amounting to about 10,000 working hours saved by AI or approximately 800k in labor hours per year.\n\nCore Outcomes:\n\nThird party risk Assessors want to programmatically identify all the issues and gaps within a particular vendor SIG relative to the institution’s MSR to facilitate the overall assessment process and reduce overall manual tasks.\n\nAn issue refers to the binary classification on whether or not the expected “appropriate response” has been met by each vendor SIG response\nA gap refers to the binary classification on whether or not the “Additional Information” provided in the vendor SIG can support the vendor SIG “Response”\n\nThird party risk assessors want to programmatically identify all the relevant MSR context which would provide the necessary information to answer the specific SIG question.\n\nNeed to check if the MSR Context is actually relevant to the SIG question since there will be instance in which a question may not be related to any part of the MSR.\nNeed to provide metadata for each relevant MSR context:\n\nFilename\nHeading\nSubheading\n\n\nThird party risk assessors want to programmatically provide a “Recommendation” for any Vendor SIG response which requires a follow up and/or has “Additional Information” in the vendor SIG.\n\nProvide a recommendation which is anchored on the gap between the relevant “MSR context” for each SIG question and the “Additional Information” provide in the vendor SIG\nFrame part of the recommendation as questions that could be used as a follow-ups for a vendor\nEnsure the questions in the recommendation are not already answered in the “Additional Information” provided in the vendor SIG",
-    "crumbs": [
-      "Problem Definition"
-    ]
-  },
-  {
-    "objectID": "src/key-takeaway.html",
-    "href": "src/key-takeaway.html",
-    "title": "Key Takeaways",
-    "section": "",
-    "text": "Best Practices\n(Capture the main takeaways and results of the project)",
-    "crumbs": [
-      "Key Takeaways"
+      "Implementation Methodology",
+      "Step One"
     ]
   },
   {
@@ -62,14 +33,50 @@
     ]
   },
   {
-    "objectID": "src/solution_overview/soft_reqs.html",
-    "href": "src/solution_overview/soft_reqs.html",
-    "title": "Software Requirements",
+    "objectID": "src/landing_page/landing_page.html",
+    "href": "src/landing_page/landing_page.html",
+    "title": "Project Name",
     "section": "",
-    "text": "IBM OpenPages\n\nversion: 9.0.0.3 or above\n\n\n\n\nwatsonx.ai\n\n\nwatson Machine Learning",
+    "text": "Project Name\nSubtitle\n\n\nOur Documentation \n\n\n\n\n\nNext Steps\n\n\n\nL ink 1\n\n\n\nLink 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Evaluating Third Party Risk with AI",
+    "section": "",
+    "text": "ET",
     "crumbs": [
-      "Solution Overview",
-      "Software Requirements"
+      "Problem Definition"
+    ]
+  },
+  {
+    "objectID": "index.html#business-statement",
+    "href": "index.html#business-statement",
+    "title": "Evaluating Third Party Risk with AI",
+    "section": "Business Statement",
+    "text": "Business Statement\nThe Third Party Risk team within a financial institution completes over 1000 vendor assessments per year as a part of their ongoing due diligence to vet the institution’s third party partners. Each assessment takes about 45 working hours to complete and is driven largely by manual evaluation of documentation, including internal policies, vendor policies, and responses on risk questionnaires.\n\nChallenges\n\nBacklog of assessments - The institution’s Third Party Risk team is behind schedule, with a backlog of assessments impacting the progression of strategic projects and initiatives across the enterprise.\nDiminished resources on the Third Party Risk team - Third Party Risk team has to do more with less, as budget constraints have led to team size reductions\nIncreasing workload - the number of assessments has grown larger every year, with continued increases forecasted\nInability to focus on high value work - including evaluating controls, deepening assessments for critical vendors, improving processes\nOverly manual process - 45 working hours per assessment prohibits the Third Party Risk team to safely scale their assessments to meet the enterprise demand",
+    "crumbs": [
+      "Problem Definition"
+    ]
+  },
+  {
+    "objectID": "index.html#use-case",
+    "href": "index.html#use-case",
+    "title": "Evaluating Third Party Risk with AI",
+    "section": "Use Case",
+    "text": "Use Case\nFirst Line of Defense - When vendors send the client their filled out SIG Questionnaires, Assessors take about 6-10 hours to review all of their answers and evidence and summarize which topics are considered “Issues” according to the organization’s standards, and which topics require a follow-up discussion with the vendor to clarify their response. IBM is leveraging wx.ai to augment this process and allow assessors to reduce the time it takes to understand the quality of vendor questionnaire responses.\n\nBusiness Outcomes\nEstimated 20% reduction in assessment time, amounting to about 10,000 working hours saved by AI or approximately 800k in labor hours per year.\n\nCore Outcomes:\n\nThird party risk Assessors want to programmatically identify all the issues and gaps within a particular vendor SIG relative to the institution’s ISR to facilitate the overall assessment process and reduce overall manual tasks.\n\nAn issue refers to the binary classification on whether or not the expected “appropriate response” has been met by each vendor SIG response\nA gap refers to the binary classification on whether or not the “Additional Information” provided in the vendor SIG can support the vendor SIG “Response”\n\nThird party risk assessors want to programmatically identify all the relevant ISR context which would provide the necessary information to answer the specific SIG question.\n\nNeed to check if the ISR Context is actually relevant to the SIG question since there will be instance in which a question may not be related to any part of the ISR.\nNeed to provide metadata for each relevant ISR context:\n\nFilename\nHeading\nSubheading\n\n\nThird party risk assessors want to programmatically provide a “Recommendation” for any Vendor SIG response which requires a follow up and/or has “Additional Information” in the vendor SIG.\n\nProvide a recommendation which is anchored on the gap between the relevant “ISR context” for each SIG question and the “Additional Information” provide in the vendor SIG\nFrame part of the recommendation as questions that could be used as a follow-ups for a vendor\nEnsure the questions in the recommendation are not already answered in the “Additional Information” provided in the vendor SIG",
+    "crumbs": [
+      "Problem Definition"
+    ]
+  },
+  {
+    "objectID": "src/key-takeaway.html",
+    "href": "src/key-takeaway.html",
+    "title": "Key Takeaways",
+    "section": "",
+    "text": "Best Practices\n(Capture the main takeaways and results of the project)",
+    "crumbs": [
+      "Key Takeaways"
     ]
   },
   {
@@ -99,21 +106,21 @@
     "href": "src/solution_overview/overview.html#solution-components",
     "title": "Overview",
     "section": "Solution Components",
-    "text": "Solution Components\n\nData Sources\nThe data sources leveraged in this solution are:\n\nInternal Security Requirements\n\nEnterprise security requirements designed to ensure compliance with organizational policies, organized into specific domains relevant to the SIG.\n\nServiceNow Issue Catalog\n\nA catalog of relevant ServiceNow issues and its relevant metadata\n\nBlank SIG (Standardized Information Gathering) Questionnaire’\n\nEmpty version of a SIG from 2024 with all the relevant headers populated\n\nVendor SIG Questionnaires\n\nVendor populated SIG questionnaires with the relevant information.\n\nVendor KY3P Extract\n\nVendor populated information from KY3P with the vendor’s response and Additional Comments (if provided).\n\n\n\n\nPreprocess Data\nThe primary objective of preprocessing the source data was to create the Reference Data that accurately maps the relationships among SIG questions, contextual details from the Internal Security Requirements, and ServiceNow Issues which facilitated the data ingestion process into OpenPages.\nThis phase involved a comprehensive ETL process to cleanse and structure the data to create the Reference Data, and it comprises of four key parts:\n\nConfigure vectorstore with Internal Security Requirements (ISR)\nDetermine Relevant ServiceNow Issue\nAggregate SIG Questions from SIG Questionnaires\nBuild Reference Data and OpenPages FastMap Import\n\n\n\nConfigure vectorstore with Internal Security Requirements (ISR)\n\nProgrammatically divide the Internal Security Requirements into a JSON structure by section, attaching relevant metadata—such as headings, subheadings, filenames, and summaries—to each segment.\nEmbed the chunks structured within the JSON into a vectors.\nIngest the vectors into a vectorstore with its metadata.\n\n\n\nDetermine Relevant ServiceNow Issue\n\nFor this solution, we did not focus on content related to external attachments provided by vendors. Instead, our team utilized watsonx.ai to filter out document-dependent issues.\nEach SIG question belonged to a specific domain group. After filtering out document-dependent issues, we programmatically removed all unrelated domain issues by leveraging unique key identifiers for each domain, ensuring our focus remained solely on the relevant domain issues.\nOnce all the irrelevant and out-of-scope issues were filtered out, our team leveraged watsonx.ai to identify the most relevant issue for each SIG Question.\n\n\n\nAggregate SIG Questions from SIG Questionnaires\n\nAggregate all the SIG questions from the Blank SIG Questionnaire and Vendor SIG Questionnaire with the relevant metadata to populate in the Reference Data\n\n\n\nBuild Reference Data and OpenPages FastMap Import\nThe series of steps to build the Reference Data is as follows:\n\nInsert all the aggregated SIG questions and the appropriate headings from Aggregate SIG Questions from SIG Questionnaires step\nFor each SIG question:\n\nsearch for the most relevant Internal Security Requirements (ISR) context from the vectorstore configured Configure vectorstore with ISR.\nAfter retrieving the most relevant context from the vector store, our team utilized another watsonx.ai Large Language Model (LLM) prompt to validate its relevance to the associated SIG question. If deemed relevant, the validated context was then used to populate the appropriate ISR context for the SIG question.\nDetermine and populate the most relevant ServiceNow Issue from the ServiceNow Issue Catalog from Determine Relevant ServiceNow Issue Step\n\n\nThe series of steps to build the OpenPages FastMap Import is as follows:\n\nProgrammatically populate the FastMap Import for SIG Questionnaire Template which consists of all the relevant SIG questions from the Reference Data\nProgrammatically populate all the ISR context relationships to the appropriate SIG questions using the Reference Data.\nProgrammatically populate all the SIG Question relationships to each question for the Assessment Template.\n\n\n\n\nConfigure OpenPages\nThe structure of IBM’s OpenPages platform with watsonx.ai allows an external compliance and security platform, KY3P, as an initial data input while providing as the platform which centralizes risk management and governance.\nIn this solution, OpenPages serves as the central platform for structured data management, while watsonx.ai enhances it with generative AI capabilities. By integrating third-party extracts, this approach enables access to additional data insights beyond the organization’s existing environment. It is ideal for organizations or teams seeking a unified solution that seamlessly integrates external data, enriches analytics, and extends watsonx.ai’s capabilities within a single platform.\nThis solution consists of three core components:\n\nBuild OpenPages Library\nConfigure OpenPages Vendor Management\nDeploy and integrate watsonx.ai models and its content.",
+    "text": "Solution Components\n\nData Sources\nThe data sources leveraged in this solution are:\n\nInternal Security Requirements\n\nEnterprise security requirements designed to ensure compliance with organizational policies, organized into specific domains relevant to the SIG.\n\nServiceNow Issue Catalog\n\nA catalog of relevant ServiceNow issues and its relevant metadata\n\nBlank SIG (Standardized Information Gathering) Questionnaire’\n\nEmpty version of a SIG from 2024 with all the relevant headers populated\n\nVendor SIG Questionnaires\n\nVendor populated SIG questionnaires with the relevant information.\n\nVendor KY3P Extract\n\nVendor populated information from KY3P with the vendor’s response and Additional Comments (if provided).\n\n\n\n\nPreprocess Data\nThe primary objective of preprocessing the source data was to create the Reference Data that accurately maps the relationships among SIG questions, contextual details from the Internal Security Requirements, and ServiceNow Issues which facilitated the data ingestion process into OpenPages.\nThis phase involved a comprehensive ETL process to cleanse and structure the data to create the Reference Data, and it comprises of four key parts:\n\nConfigure vectorstore with Internal Security Requirements (ISR)\nDetermine Relevant ServiceNow Issue\nAggregate SIG Questions from SIG Questionnaires\nBuild Reference Data and OpenPages FastMap Import\n\n\n\nConfigure vectorstore with Internal Security Requirements (ISR)\n\nProgrammatically divide the Internal Security Requirements into a JSON structure by section, attaching relevant metadata—such as headings, subheadings, filenames, and summaries—to each segment.\nEmbed the chunks structured within the JSON into a vectors.\nIngest the vectors into a vectorstore with its metadata.\n\n\n\nDetermine Relevant ServiceNow Issue\n\nFor this solution, we did not focus on content related to external attachments provided by vendors. Instead, our team utilized watsonx.ai to filter out document-dependent issues.\nEach SIG question belonged to a specific domain group. After filtering out document-dependent issues, we programmatically removed all unrelated domain issues by leveraging unique key identifiers for each domain, ensuring our focus remained solely on the relevant domain issues.\nOnce all the irrelevant and out-of-scope issues were filtered out, our team leveraged watsonx.ai to identify the most relevant issue for each SIG Question.\n\n\n\nAggregate SIG Questions from SIG Questionnaires\n\nAggregate all the SIG questions from the Blank SIG Questionnaire and Vendor SIG Questionnaire with the relevant metadata to populate in the Reference Data\n\n\n\nBuild Reference Data and OpenPages FastMap Import\nThe series of steps to build the Reference Data is as follows:\n\nInsert all the aggregated SIG questions and the appropriate headings from Aggregate SIG Questions from SIG Questionnaires step\nFor each SIG question:\n\nsearch for the most relevant Internal Security Requirements (ISR) context from the vectorstore configured Configure vectorstore with ISR.\nAfter retrieving the most relevant context from the vector store, our team utilized another watsonx.ai Large Language Model (LLM) prompt to validate its relevance to the associated SIG question. If deemed relevant, the validated context was then used to populate the appropriate ISR context for the SIG question.\nDetermine and populate the most relevant ServiceNow Issue from the ServiceNow Issue Catalog from Determine Relevant ServiceNow Issue Step\n\n\nThe series of steps to build the OpenPages FastMap Import is as follows:\n\nProgrammatically populate the FastMap Import for SIG Questionnaire Template which consists of all the relevant SIG questions from the Reference Data\nProgrammatically populate all the ISR context relationships to the appropriate SIG questions using the Reference Data.\nProgrammatically populate all the SIG Question relationships to each question for the Assessment Template.\n\n\n\n\nConfigure OpenPages\nThe structure of IBM’s OpenPages platform with watsonx.ai allows an external compliance and security platform, KY3P, as an initial data input while providing as the platform which centralizes risk management and governance.\nIn this solution, OpenPages serves as the central platform for structured data management, while watsonx.ai enhances it with generative AI capabilities. By integrating third-party extracts, this approach enables access to additional data insights beyond the organization’s existing environment. It is ideal for organizations or teams seeking a unified solution that seamlessly integrates external data, enriches analytics, and extends watsonx.ai’s capabilities within a single platform.\nThis phase consists of four core components:\n\nBuild Library\nConfigure Vendor Management\nDeploy and integrate watsonx.ai models.\nCreate dashboards and reports\n\n\nOverview\n\n\n\nDeep Dive\n\n\n\nBuild Library\nBuilding the OpenPages library emulates the same goal as creating the reference data as it builds the objects in OpenPages that will serve as the anchor/reference for every incoming vendor SIG. There are two core components to setup for the OpenPages library for this use case:\n1. Mandate The Mandate object relies on the Internal Security Requirements (ISR) to store relationships relevant to the ISR. Each ISR mandate will include submandate objects, and each submandate will have an associated Requirement object. - Submandate: the associated ISR “heading” for each SIG question - Requirement: the associated ISR context for each SIG question\n2. An Assessment Template The assessment template will house all of the relevant information for each SIG question and will be used to create each new vendor assessment in OpenPages.\nThe assessment template relies on the Blank SIG data To build the assessment template, we will utilize the “Assessment” object in OpenPages, incorporating each SIG question through the “Question” object. Each SIG question will have fields associated with it:\n\n\n\n\n\nField Name\n\n\nDescription\n\n\nExample\n\n\n\n\nSIG Question\n\n\nQuestion text\n\n\n“Does the enterprise risk governance program include definitions of the roles and responsibilities for IT Governance?”\n\n\n\n\nIssue Metadata\n\n\nInformation pertaining to the relevant issue for the SIG question\n\n\n\n\n\n\nControl Info\n\n\nInformation around the control associated with the SIG question\n\n\n“Policies, Standards, and Procedures”\n\n\n\n\nIn Scope\n\n\nA flag to determine if the question was given to a vendor or not\n\n\n“Yes” or “No”\n\n\n\n\nResponse\n\n\nA field to populate a vendor’s response to the SIG question\n\n\n“Yes”, “No”, “N/A”\n\n\n\n\nAdditional Comments\n\n\nA field to populate a vendor’s additional comments to the SIG question\n\n\n\n\n\n\nISR Context\n\n\nA calculated field from the Requirement object with the relevant ISR context to the SIG question\n\n\n“Heading: II. IT Security Program Standard, Content: Managing information security risk, like risk management in general, is not an exact science. It brings together the best collective judgment of individuals and groups within organizations responsible for strategic planning, oversight, management, and day-to-day operations. etc..”\n\n\n\n\n\n\nConfigure OpenPages Vendor Management\nEach new vendor SIG is introduced through an external vendor SIG extract. A corresponding Business Entity object is then created in OpenPages, which generates a Vendor object. This Vendor object, in turn, creates an associated Assessment object for the Vendor SIG.\nFor each new Vendor SIG assessment, the content from the Vendor SIG template is copied to serve as the foundation. This provides a starting point for leveraging generative AI to populate the “Issue,” “Gap,” and “Recommendation” fields.\n\n\nDeploy and integrate watsonx.ai functions\nGenerative AI is leveraged to populate the “Issue”, “Gap” and “Recommendation” field in a Vendor SIG Assessment. This use case leverages three different watsonx.ai models through Watson Machine Learning:\n\nGap Analysis: Determine whether or not the “Additional Comments” supports the vendor response for a specific SIG question.\nIssue Analysis: Determine whether or not the vendor response is most likely against industry and internal security standards.\nRecommendation Analysis: Leverage the ISR context and provided Additional Comments to provide an analysis on the delta and provide follow-up questions for the vendor.",
     "crumbs": [
       "Solution Overview",
       "Overview"
     ]
   },
   {
-    "objectID": "src/implementation_methodology/stepone-imp.html",
-    "href": "src/implementation_methodology/stepone-imp.html",
-    "title": "Step One",
+    "objectID": "src/solution_overview/soft_reqs.html",
+    "href": "src/solution_overview/soft_reqs.html",
+    "title": "Software Requirements",
     "section": "",
-    "text": "Step One Implementation - The How\n(Details the process and techniques used to execute the technical solution)",
+    "text": "IBM OpenPages\n\nversion: 9.0.0.3 or above\n\n\n\n\nwatsonx.ai\n\n\nwatson Machine Learning",
     "crumbs": [
-      "Implementation Methodology",
-      "Step One"
+      "Solution Overview",
+      "Software Requirements"
     ]
   },
   {
@@ -126,12 +133,5 @@
       "Implementation Methodology",
       "Step Three"
     ]
-  },
-  {
-    "objectID": "src/landing_page/landing_page.html",
-    "href": "src/landing_page/landing_page.html",
-    "title": "Project Name",
-    "section": "",
-    "text": "Project Name\nSubtitle\n\n\nOur Documentation \n\n\n\n\n\nNext Steps\n\n\n\nL ink 1\n\n\n\nLink 2"
   }
 ]
