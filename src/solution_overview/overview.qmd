@@ -1,16 +1,18 @@
 ---
-title: ""
+title: "Overview"
 format: html
 ---
-
-# Overview
 
 -----
 This solution’s key differentiator is its hybrid approach, which combines deterministic methods with interpretive techniques. Rather than relying solely on generative AI, this solution intentionally leverages the strengths of both approaches to deliver a more holistic, accurate, and economical solution. The deterministic component uses precise, programmatic logic to achieve specific outcomes, while the interpretive component harnesses generative AI to efficiently address scenarios that traditional methods would find overly tedious or prone to excessive edge cases. This synergy not only enhances overall performance but also saves valuable time.
 
-**This solution comprises two core components:**
+**This solution comprises three core components:**
+
+1. Data Sources:
+
+    - All the different data sources required to achieve the business outcomes for this solution.
     
-1. Preprocessing Raw Data:
+1. Preprocessing Data:
 
     - Transform raw data into actionable insights through a series of deterministic and interpretative steps, enabling generative AI to achieve optimal outcomes within OpenPages.
 
@@ -44,27 +46,57 @@ The primary objective of preprocessing the source data was to create the **Refer
 
 This phase involved a comprehensive ETL process to cleanse and structure the data to create the **Reference Data**, and it comprises of four key parts:
 
-1. Chunk, embed and ingest the *Internal Security Requirements*
-2. Clean and filter the *ServiceNow Issue Catalog*
-3. Preprocess *Blank SIG Questionnaire* and *Vendor SIG Questionnaires*
-4. Build **Reference Data** and FastMap Import
+1. Configure vectorstore with  *Internal Security Requirements (ISR)*
+2. Determine Relevant ServiceNow Issue
+3. Aggregate SIG Questions from SIG Questionnaires
+4. Build **Reference Data** and OpenPages FastMap Import
 
 
 ![](/images/ISR_preprocess.png)
 
-#### Chunk, embed and ingest the *Internal Security Requirements*
+#### Configure vectorstore with  *Internal Security Requirements (ISR)*
 
 * Programmatically divide the *Internal Security Requirements* into a JSON structure by section, attaching relevant metadata—such as headings, subheadings, filenames, and summaries—to each segment.
 * Embed the chunks structured within the JSON into a vectors.
 * Ingest the vectors into a vectorstore with its metadata.
 
-#### Clean and filer  *ServiceNow Issue Catalog*
+#### Determine Relevant ServiceNow Issue
+* For this solution, we did not focus on content related to external attachments provided by vendors. Instead, our team utilized watson<span style="color:#2c62f5;">x</span>.ai to filter out document-dependent issues.
+* Each SIG question belonged to a specific domain group. After filtering out document-dependent issues, we programmatically removed all unrelated domain issues by leveraging unique key identifiers for each domain, ensuring our focus remained solely on the relevant domain issues.
+* Once all the irrelevant and out-of-scope issues were filtered out, our team leveraged watson<span style="color:#2c62f5;">x</span>.ai to identify the most relevant issue for each SIG Question.
 
-#### Preprocess *Blank SIG Questionnaire* and *Vendor SIG Questionnaires*
+#### Aggregate SIG Questions from SIG Questionnaires
+* Aggregate all the SIG questions from the *Blank SIG Questionnaire* and *Vendor SIG Questionnaire* with the relevant metadata to populate in the **Reference Data**
 
-#### Build **Reference Data** and FastMap Import
+#### Build **Reference Data** and OpenPages FastMap Import
 
+The series of steps to build the **Reference Data** is as follows:
 
+1. Insert all the aggregated SIG questions and the appropriate headings from [*Aggregate SIG Questions from SIG Questionnaires* step](#aggregate-sig-questions-from-blank-sig-questionnaire-and-vendor-sig-questionnaires)
+2. For each SIG question:
+    i. search for the most relevant *Internal Security Requirements (ISR)* context from the vectorstore configured [*Configure vectorstore with ISR*](#configure-vectorstore-with--internal-security-requirements-(isr)).
+    ii. After retrieving the most relevant context from the vector store, our team utilized another watson<span style="color:#2c62f5;">x</span>.ai Large Language Model (LLM) prompt to validate its relevance to the associated SIG question. If deemed relevant, the validated context was then used to populate the appropriate ISR context for the SIG question.
+    iii. Determine and populate the most relevant ServiceNow Issue from the *ServiceNow Issue Catalog* from [*Determine Relevant ServiceNow Issue* Step](#determine-relevant-servicenow-issue)
+
+The series of steps to build the **OpenPages FastMap Import** is as follows:
+
+1. Programmatically populate the FastMap Import for SIG Questionnaire Template which consists of all the relevant SIG questions from the **Reference Data**
+2. Programmatically populate all the ISR context relationships to the appropriate SIG questions using the **Reference Data**.
+3. Programmatically populate all the SIG Question relationships to each question for the Assessment Template.
+
+### Configure OpenPages
+
+The structure of IBM’s OpenPages platform with watson<span style="color:#2c62f5;">x</span>.ai allows an external compliance and security platform, KY3P, as an initial data input while providing as the platform which centralizes risk management and governance. 
+
+In this solution, OpenPages serves as the central platform for structured data management, while watson<span style="color:#2c62f5;">x</span>.ai enhances it with generative AI capabilities. By integrating third-party extracts, this approach enables access to additional data insights beyond the organization's existing environment. It is ideal for organizations or teams seeking a unified solution that seamlessly integrates external data, enriches analytics, and extends watson<span style="color:#2c62f5;">x</span>.ai's capabilities within a single platform.
+
+**This solution consists of three core components:**
+
+1. Build OpenPages Library
+2. Configure OpenPages Vendor Management
+3. Deploy and integrate watsonx.ai models and its content.
+
+![](/images/configure_op.png)
 
 
 
