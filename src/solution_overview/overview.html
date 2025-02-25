@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>overview – Evaluating Third Party Risk with AI</title>
+<title>Overview – Evaluating Third Party Risk with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -223,31 +223,47 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
-  <ul class="collapse">
-  <li><a href="#solution-flow" id="toc-solution-flow" class="nav-link" data-scroll-target="#solution-flow">Solution Flow</a></li>
+  <li><a href="#solution-flow" id="toc-solution-flow" class="nav-link active" data-scroll-target="#solution-flow">Solution Flow</a></li>
   <li><a href="#solution-components" id="toc-solution-components" class="nav-link" data-scroll-target="#solution-components">Solution Components</a>
   <ul class="collapse">
   <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a></li>
   <li><a href="#preprocess-data" id="toc-preprocess-data" class="nav-link" data-scroll-target="#preprocess-data">Preprocess Data</a></li>
-  </ul></li>
+  <li><a href="#configure-openpages" id="toc-configure-openpages" class="nav-link" data-scroll-target="#configure-openpages">Configure OpenPages</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/solution_overview/overview.html">Solution Overview</a></li><li class="breadcrumb-item"><a href="../../src/solution_overview/overview.html">Overview</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/solution_overview/overview.html">Solution Overview</a></li><li class="breadcrumb-item"><a href="../../src/solution_overview/overview.html">Overview</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Overview</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="overview" class="level1">
-<h1>Overview</h1>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <hr>
 <p>This solution’s key differentiator is its hybrid approach, which combines deterministic methods with interpretive techniques. Rather than relying solely on generative AI, this solution intentionally leverages the strengths of both approaches to deliver a more holistic, accurate, and economical solution. The deterministic component uses precise, programmatic logic to achieve specific outcomes, while the interpretive component harnesses generative AI to efficiently address scenarios that traditional methods would find overly tedious or prone to excessive edge cases. This synergy not only enhances overall performance but also saves valuable time.</p>
-<p><strong>This solution comprises two core components:</strong></p>
+<p><strong>This solution comprises three core components:</strong></p>
 <ol type="1">
-<li><p>Preprocessing Raw Data:</p>
+<li><p>Data Sources:</p>
+<ul>
+<li>All the different data sources required to achieve the business outcomes for this solution.</li>
+</ul></li>
+<li><p>Preprocessing Data:</p>
 <ul>
 <li>Transform raw data into actionable insights through a series of deterministic and interpretative steps, enabling generative AI to achieve optimal outcomes within OpenPages.</li>
 </ul></li>
@@ -294,32 +310,67 @@ ul.task-list li input[type="checkbox"] {
 <p>The primary objective of preprocessing the source data was to create the <strong>Reference Data</strong> that accurately maps the relationships among SIG questions, contextual details from the Internal Security Requirements, and ServiceNow Issues which facilitated the data ingestion process into OpenPages.</p>
 <p>This phase involved a comprehensive ETL process to cleanse and structure the data to create the <strong>Reference Data</strong>, and it comprises of four key parts:</p>
 <ol type="1">
-<li>Chunk, embed and ingest the <em>Internal Security Requirements</em></li>
-<li>Clean and filter the <em>ServiceNow Issue Catalog</em></li>
-<li>Preprocess <em>Blank SIG Questionnaire</em> and <em>Vendor SIG Questionnaires</em></li>
-<li>Build <strong>Reference Data</strong> and FastMap Import</li>
+<li>Configure vectorstore with <em>Internal Security Requirements (ISR)</em></li>
+<li>Determine Relevant ServiceNow Issue</li>
+<li>Aggregate SIG Questions from SIG Questionnaires</li>
+<li>Build <strong>Reference Data</strong> and OpenPages FastMap Import</li>
 </ol>
 <p><img src="../../images/ISR_preprocess.png" class="img-fluid"></p>
-<section id="chunk-embed-and-ingest-the-internal-security-requirements" class="level4">
-<h4 class="anchored" data-anchor-id="chunk-embed-and-ingest-the-internal-security-requirements">Chunk, embed and ingest the <em>Internal Security Requirements</em></h4>
+<section id="configure-vectorstore-with-internal-security-requirements-isr" class="level4">
+<h4 class="anchored" data-anchor-id="configure-vectorstore-with-internal-security-requirements-isr">Configure vectorstore with <em>Internal Security Requirements (ISR)</em></h4>
 <ul>
 <li>Programmatically divide the <em>Internal Security Requirements</em> into a JSON structure by section, attaching relevant metadata—such as headings, subheadings, filenames, and summaries—to each segment.</li>
 <li>Embed the chunks structured within the JSON into a vectors.</li>
 <li>Ingest the vectors into a vectorstore with its metadata.</li>
 </ul>
 </section>
-<section id="clean-and-filer-servicenow-issue-catalog" class="level4">
-<h4 class="anchored" data-anchor-id="clean-and-filer-servicenow-issue-catalog">Clean and filer <em>ServiceNow Issue Catalog</em></h4>
+<section id="determine-relevant-servicenow-issue" class="level4">
+<h4 class="anchored" data-anchor-id="determine-relevant-servicenow-issue">Determine Relevant ServiceNow Issue</h4>
+<ul>
+<li>For this solution, we did not focus on content related to external attachments provided by vendors. Instead, our team utilized watson<span style="color:#2c62f5;">x</span>.ai to filter out document-dependent issues.</li>
+<li>Each SIG question belonged to a specific domain group. After filtering out document-dependent issues, we programmatically removed all unrelated domain issues by leveraging unique key identifiers for each domain, ensuring our focus remained solely on the relevant domain issues.</li>
+<li>Once all the irrelevant and out-of-scope issues were filtered out, our team leveraged watson<span style="color:#2c62f5;">x</span>.ai to identify the most relevant issue for each SIG Question.</li>
+</ul>
 </section>
-<section id="preprocess-blank-sig-questionnaire-and-vendor-sig-questionnaires" class="level4">
-<h4 class="anchored" data-anchor-id="preprocess-blank-sig-questionnaire-and-vendor-sig-questionnaires">Preprocess <em>Blank SIG Questionnaire</em> and <em>Vendor SIG Questionnaires</em></h4>
+<section id="aggregate-sig-questions-from-sig-questionnaires" class="level4">
+<h4 class="anchored" data-anchor-id="aggregate-sig-questions-from-sig-questionnaires">Aggregate SIG Questions from SIG Questionnaires</h4>
+<ul>
+<li>Aggregate all the SIG questions from the <em>Blank SIG Questionnaire</em> and <em>Vendor SIG Questionnaire</em> with the relevant metadata to populate in the <strong>Reference Data</strong></li>
+</ul>
 </section>
-<section id="build-reference-data-and-fastmap-import" class="level4">
-<h4 class="anchored" data-anchor-id="build-reference-data-and-fastmap-import">Build <strong>Reference Data</strong> and FastMap Import</h4>
+<section id="build-reference-data-and-openpages-fastmap-import" class="level4">
+<h4 class="anchored" data-anchor-id="build-reference-data-and-openpages-fastmap-import">Build <strong>Reference Data</strong> and OpenPages FastMap Import</h4>
+<p>The series of steps to build the <strong>Reference Data</strong> is as follows:</p>
+<ol type="1">
+<li>Insert all the aggregated SIG questions and the appropriate headings from <a href="#aggregate-sig-questions-from-blank-sig-questionnaire-and-vendor-sig-questionnaires"><em>Aggregate SIG Questions from SIG Questionnaires</em> step</a></li>
+<li>For each SIG question:
+<ol type="i">
+<li>search for the most relevant <em>Internal Security Requirements (ISR)</em> context from the vectorstore configured <a href="#configure-vectorstore-with--internal-security-requirements-(isr)"><em>Configure vectorstore with ISR</em></a>.</li>
+<li>After retrieving the most relevant context from the vector store, our team utilized another watson<span style="color:#2c62f5;">x</span>.ai Large Language Model (LLM) prompt to validate its relevance to the associated SIG question. If deemed relevant, the validated context was then used to populate the appropriate ISR context for the SIG question.</li>
+<li>Determine and populate the most relevant ServiceNow Issue from the <em>ServiceNow Issue Catalog</em> from <a href="#determine-relevant-servicenow-issue"><em>Determine Relevant ServiceNow Issue</em> Step</a></li>
+</ol></li>
+</ol>
+<p>The series of steps to build the <strong>OpenPages FastMap Import</strong> is as follows:</p>
+<ol type="1">
+<li>Programmatically populate the FastMap Import for SIG Questionnaire Template which consists of all the relevant SIG questions from the <strong>Reference Data</strong></li>
+<li>Programmatically populate all the ISR context relationships to the appropriate SIG questions using the <strong>Reference Data</strong>.</li>
+<li>Programmatically populate all the SIG Question relationships to each question for the Assessment Template.</li>
+</ol>
+</section>
+</section>
+<section id="configure-openpages" class="level3">
+<h3 class="anchored" data-anchor-id="configure-openpages">Configure OpenPages</h3>
+<p>The structure of IBM’s OpenPages platform with watson<span style="color:#2c62f5;">x</span>.ai allows an external compliance and security platform, KY3P, as an initial data input while providing as the platform which centralizes risk management and governance.</p>
+<p>In this solution, OpenPages serves as the central platform for structured data management, while watson<span style="color:#2c62f5;">x</span>.ai enhances it with generative AI capabilities. By integrating third-party extracts, this approach enables access to additional data insights beyond the organization’s existing environment. It is ideal for organizations or teams seeking a unified solution that seamlessly integrates external data, enriches analytics, and extends watson<span style="color:#2c62f5;">x</span>.ai’s capabilities within a single platform.</p>
+<p><strong>This solution consists of three core components:</strong></p>
+<ol type="1">
+<li>Build OpenPages Library</li>
+<li>Configure OpenPages Vendor Management</li>
+<li>Deploy and integrate watsonx.ai models and its content.</li>
+</ol>
+<p><img src="../../images/configure_op.png" class="img-fluid"></p>
 
 
-</section>
-</section>
 </section>
 </section>
 
